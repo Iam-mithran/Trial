@@ -36,7 +36,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'production' }
       }
       steps {
-        input message: "Approve deployment to production?", ok: 'Deploy'
+        input message: "Approve the deployment to production?", ok: 'Deploy'
       }
     }
 
