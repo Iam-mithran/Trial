@@ -24,7 +24,7 @@ pipeline {
     stage('Terraform Plan') {
       steps {
         dir("${TF_WORKDIR}") {
-          sh 'terraform plan -var-file=terraform.tfvars -out=tfplan'
+          sh 'terraform plan -out=tfplan'
           sh 'terraform show -no-color tfplan > tfplan.txt'
           sh 'cat tfplan.txt'
         }
